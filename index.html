@@ -1,0 +1,608 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rehlatk | Discover Egypt</title>
+    <link rel="shortcut icon" href="favicon-16x16.png" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon-32x32.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+   <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div class="blur-orb orb-1"></div>
+    <div class="blur-orb orb-2"></div>
+
+    <header class="site-header">
+      <div class="container nav">
+        <a href="#home" class="brand">
+          <div class="brand-badge"><img src="rlogo.png" alt="" /></div>
+          <div class="brand-text">
+            <h2>رحلاتك</h2>
+            <p>رحلات وتجارب سياحية بشكل مختلف</p>
+          </div>
+        </a>
+
+        <nav class="nav-links" id="navLinks">
+          <a href="#home" class="active">الرئيسية</a>
+          <a href="#destinations">الوجهات</a>
+          <a href="#experience-flow">التجارب</a>
+          <a href="#packages">الباقات</a>
+          <a href="#reviews">الآراء</a>
+          <a href="#contact">تواصل</a>
+        </nav>
+
+        <div class="nav-actions">
+          <a href="#packages" class="btn btn-secondary">الباقات</a>
+          <a href="#contact" class="btn btn-primary">احجز رحلتك</a>
+          <button class="menu-btn" id="menuBtn">☰</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="container">
+          <div class="hero-grid reveal">
+            <div class="hero-copy">
+              <!-- <div class="eyebrow">
+                وجهات مختارة • خطط سفر مرنة • تجربة مريحة
+              </div> -->
+              <h1>
+                خليك أقرب لرحلة <span>تحسّها</span><br />مش مجرد رحلة عادية
+              </h1>
+              <p>
+                اكتشف أماكن ساحرة، خطط سفر ذكية، وتجارب تجمع بين الراحة
+                والمغامرة. الموقع ده معمول بشكل عصري علشان يخلي تصفح الرحلات
+                ممتع وسهل من أول نظرة.
+              </p>
+
+              <div class="hero-actions">
+                <a href="#destinations" class="btn btn-primary"
+                  >استكشف الوجهات</a
+                >
+                <a href="#experience-flow" class="btn btn-secondary">شوف التجارب</a>
+              </div>
+
+              <div class="hero-mini-stats">
+                <div class="hero-stat">
+                  <h3 data-count="120">0</h3>
+                  <p>
+                    برنامج سياحي متنوع بين البحر والصحراء والمعالم التاريخية.
+                  </p>
+                </div>
+                <div class="hero-stat">
+                  <h3 data-count="35">0</h3>
+                  <p>مدينة ووجهة تقدر تختار من بينهم بسهولة وبسرعة.</p>
+                </div>
+                <div class="hero-stat">
+                  <h3 data-count="98">0</h3>
+                  <p>رضا العملاء عن التنظيم وسهولة الحجز والتجربة العامة.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="hero-visual">
+              <div class="hero-photo">
+                <img
+                  src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80"
+                  alt="منظر سياحي"
+                />
+              </div>
+
+              <div class="floating-card card-top">
+                <small>أفضل رحلة هذا الشهر</small>
+                <h3>سفاري + بحر + تصوير</h3>
+                <div class="progress-wrap">
+                  <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="floating-card card-bottom">
+                <small>الوجهات الأكثر طلبًا</small>
+                <div class="card-list">
+                  <div><span>دهب</span><strong>4 أيام</strong></div>
+                  <div><span>أسوان</span><strong>3 أيام</strong></div>
+                  <div><span>مرسى علم</span><strong>5 أيام</strong></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="quick-search reveal">
+            <div class="quick-search-grid">
+              <div class="field">
+                <label>الوجهة</label>
+                <select>
+                  <option>اختار المدينة</option>
+                  <option>شرم الشيخ</option>
+                  <option>دهب</option>
+                  <option>الأقصر</option>
+                  <option>أسوان</option>
+                </select>
+              </div>
+              <div class="field">
+                <label>عدد الأيام</label>
+                <select>
+                  <option>3 - 5 أيام</option>
+                  <option>5 - 7 أيام</option>
+                  <option>أسبوع كامل</option>
+                </select>
+              </div>
+              <div class="field">
+                <label>نوع الرحلة</label>
+                <select>
+                  <option>استجمام</option>
+                  <option>مغامرة</option>
+                  <option>ثقافية</option>
+                </select>
+              </div>
+              <div class="field">
+                <label>عدد الأفراد</label>
+                <input type="text" placeholder="مثلاً 4 أفراد" />
+              </div>
+              <button class="btn btn-primary" id="searchBtn">ابحث الآن</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="destinations">
+        <div class="container">
+          <div class="section-head reveal">
+            <div class="title-box">
+              <span>وجهات مميزة</span>
+              <h2>أماكن تبهر العين من أول لقطة</h2>
+            </div>
+            <p>
+              اختر مكان يناسب مودك: بحر هادي، جبال وسفاري، أو رحلة فيها تاريخ
+              وثقافة. التصميم هنا معتمد على كروت كبيرة وصور قوية علشان يدي إحساس
+              مختلف.
+            </p>
+          </div>
+
+          <div class="destinations-grid">
+            <article class="destination-card large reveal">
+              <img
+                src="https://images.unsplash.com/photo-1578898887932-dce23a595ad4?auto=format&fit=crop&w=1200&q=80"
+                alt="دهب"
+              />
+              <div class="destination-info">
+                <div class="tag">مغامرة واسترخاء</div>
+                <h3>دهب</h3>
+                <p>غوص، بحر صافي، وأجواء شبابية مميزة.</p>
+              </div>
+            </article>
+
+            <article class="destination-card large reveal">
+              <img src="images (1).jpg" alt="الأقصر" />
+              <div class="destination-info">
+                <div class="tag">تاريخ وحضارة</div>
+                <h3>الأقصر</h3>
+                <p>معابد وآثار وتجربة ثقافية مليانة تفاصيل.</p>
+              </div>
+            </article>
+
+            <article class="destination-card small reveal">
+              <img
+                src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80"
+                alt="شرم الشيخ"
+              />
+              <div class="destination-info">
+                <div class="tag">شواطئ</div>
+                <h3>شرم الشيخ</h3>
+                <p>رفاهية وبحر وأنشطة.</p>
+              </div>
+            </article>
+
+            <article class="destination-card small reveal">
+              <img
+                src="https://images.unsplash.com/photo-1517760444937-f6397edcbbcd?auto=format&fit=crop&w=900&q=80"
+                alt="أسوان"
+              />
+              <div class="destination-info">
+                <div class="tag">هدوء</div>
+                <h3>أسوان</h3>
+                <p>جو هادي ونيل ومناظر رائعة.</p>
+              </div>
+            </article>
+
+            <article class="destination-card small reveal">
+              <img
+                src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=900&q=80"
+                alt="مرسى علم"
+              />
+              <div class="destination-info">
+                <div class="tag">منتجعات</div>
+                <h3>مرسى علم</h3>
+                <p>استجمام كامل ومياه خلابة.</p>
+              </div>
+            </article>
+
+            <article class="destination-card small reveal">
+              <img
+                src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=900&q=80"
+                alt="سيوة"
+              />
+              <div class="destination-info">
+                <div class="tag">طبيعة</div>
+                <h3>سيوة</h3>
+                <p>صحرا وجمال مختلف وهدوء فريد.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- <section id="experiences">
+        <div class="container">
+          <div class="features-wrap">
+            <div class="feature-panel reveal">
+              <div class="title-box">
+                <span style="color: var(--primary); font-weight: 700">ليه الموقع ده مختلف؟</span>
+                <h2 style="margin: 10px 0 0">تجربة سياحية بشكل أنعم وأوضح</h2>
+              </div>
+
+              <div class="feature-list">
+                <div class="feature-item">
+                  <div class="feature-icon">✦</div>
+                  <div>
+                    <h3>تصميم بصري جذاب</h3>
+                    <p>كروت كبيرة، طبقات شفافة، وصور قوية بتدي إحساس premium بدون زحمة.</p>
+                  </div>
+                </div>
+
+                <div class="feature-item">
+                  <div class="feature-icon">⌘</div>
+                  <div>
+                    <h3>تنقل سهل</h3>
+                    <p>الأقسام واضحة واليوزر يوصّل للمعلومة أو الحجز بسرعة ومن غير لخبطة.</p>
+                  </div>
+                </div>
+
+                <div class="feature-item">
+                  <div class="feature-icon">❋</div>
+                  <div>
+                    <h3>حركة خفيفة ومحترمة</h3>
+                    <p>Animations بسيطة في الظهور والسلايدر علشان الشكل يبقى حي لكن مش مزعج.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="story-panel reveal">
+              <div class="story-badge">خطة السفر الذكية</div>
+              <h2 style="margin: 0 0 12px; font-size: clamp(1.9rem, 3vw, 2.8rem)">
+                من أول اختيار الوجهة لحد تفاصيل الرحلة
+              </h2>
+              <p>
+                تقدر تعتمد على تجربة منظمة فيها اختيار الوجهة، مقارنة سريعة بين الباقات،
+                ومعرفة نوع الأنشطة المتاحة. الفكرة هنا إن الموقع نفسه يحسسك بروح السفر
+                قبل ما تبدأ الرحلة.
+              </p>
+
+              <div class="story-stats">
+                <div class="story-stat">
+                  <h4>24/7</h4>
+                  <p>دعم للرد على الاستفسارات وتنظيم الحجز.</p>
+                </div>
+                <div class="story-stat">
+                  <h4>+15K</h4>
+                  <p>عميل استمتع بتجارب متنوعة خلال المواسم السابقة.</p>
+                </div>
+                <div class="story-stat">
+                  <h4>Custom</h4>
+                  <p>إمكانية تخصيص الرحلة حسب الميزانية والمدة.</p>
+                </div>
+                <div class="story-stat">
+                  <h4>Easy</h4>
+                  <p>واجهة بسيطة تخلي الاختيار أسرع وأسهل.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> -->
+      <section id="experience-flow" class="experience-flow">
+        <div class="container">
+          <div class="flow-head">
+            <span>تجربة مختلفة</span>
+            <h2>رحلتك بتبدأ قبل ما تسافر</h2>
+            <p>
+              مش مجرد حجز… إحنا بنخليك تعيش الرحلة من أول ما تختارها لحد ما
+              ترجع.
+            </p>
+          </div>
+
+          <div class="flow-timeline">
+            <div class="flow-step">
+              <div class="circle">1</div>
+              <h3>اختار المود</h3>
+              <p>بحر، مغامرة، أو تاريخ… حسب حالتك.</p>
+            </div>
+
+            <div class="flow-step">
+              <div class="circle">2</div>
+              <h3>شوف الرحلات</h3>
+              <p>باقات واضحة وسهلة المقارنة.</p>
+            </div>
+
+            <div class="flow-step">
+              <div class="circle">3</div>
+              <h3>خصص رحلتك</h3>
+              <p>عدد أيام – ميزانية – نشاطات.</p>
+            </div>
+
+            <div class="flow-step">
+              <div class="circle">4</div>
+              <h3>احجز بسهولة</h3>
+              <p>بدون تعقيد أو خطوات كتير.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="packages">
+        <div class="container">
+          <div class="section-head reveal">
+            <div class="title-box">
+              <span>باقات جاهزة</span>
+              <h2>اختر الرحلة اللي تناسب وقتك وميزانيتك</h2>
+            </div>
+            <p>
+              كل باقة معمولة بشكل واضح: مدة الرحلة، الجو العام، ونوع التجربة.
+              تقدر تستخدمها كنموذج وتغير المحتوى بعدين براحتك.
+            </p>
+          </div>
+
+          <div class="packages-grid">
+            <article class="package-card reveal">
+              <div class="package-image">
+                <img
+                  src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1000&q=80"
+                  alt="Sea Escape"
+                />
+              </div>
+              <div class="package-content">
+                <div class="package-top">
+                  <h3>Sea Escape</h3>
+                  <div class="price">2800EGP</div>
+                </div>
+                <p>
+                  باقة مريحة لعشاق البحر والهدوء مع إقامة مميزة وأنشطة خفيفة
+                  مناسبة للأفراد أو الأزواج.
+                </p>
+                <div class="package-meta">
+                  <span>4 أيام</span>
+                  <span>إقامة + إفطار</span>
+                  <span>أنشطة بحرية</span>
+                </div>
+                <a href="#contact" class="btn btn-secondary" style="width: 100%"
+                  >احجز الباقة</a
+                >
+              </div>
+            </article>
+
+            <article class="package-card reveal">
+              <div class="package-image">
+                <img
+                  src="https://images.unsplash.com/photo-1482192596544-9eb780fc7f66?auto=format&fit=crop&w=1000&q=80"
+                  alt="Desert Mood"
+                />
+              </div>
+              <div class="package-content">
+                <div class="package-top">
+                  <h3>Desert Mood</h3>
+                  <div class="price">2200EGP</div>
+                </div>
+                <p>
+                  تجربة صحراوية مميزة تجمع بين السفاري والمناظر الطبيعية والهدوء
+                  بعيدًا عن زحمة المدن.
+                </p>
+                <div class="package-meta">
+                  <span>3 أيام</span>
+                  <span>سفاري</span>
+                  <span>عشاء بدوي</span>
+                </div>
+                <a href="#contact" class="btn btn-secondary" style="width: 100%"
+                  >احجز الباقة</a
+                >
+              </div>
+            </article>
+
+            <article class="package-card reveal">
+              <div class="package-image">
+                <img
+                  src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=1000&q=80"
+                  alt="Culture Trip"
+                />
+              </div>
+              <div class="package-content">
+                <div class="package-top">
+                  <h3>Culture Trip</h3>
+                  <div class="price">4280EGP</div>
+                </div>
+                <p>
+                  باقة لعشاق التاريخ والزيارات الثقافية مع جولات منظمة ومعالم
+                  مميزة وتجربة غنية بالتفاصيل.
+                </p>
+                <div class="package-meta">
+                  <span>5 أيام</span>
+                  <span>مرشد سياحي</span>
+                  <span>تنقلات</span>
+                </div>
+                <a href="#contact" class="btn btn-secondary" style="width: 100%"
+                  >احجز الباقة</a
+                >
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="reviews">
+        <div class="container">
+          <div class="testimonials-wrap">
+            <div class="testimonial-highlight reveal">
+              <div class="title-box">
+                <span style="color: var(--primary); font-weight: 700"
+                  >آراء العملاء</span
+                >
+                <h2 style="margin: 10px 0 12px">ناس جرّبت وكررت التجربة</h2>
+              </div>
+              <p>
+                الجزء ده معمول كسلايدر بسيط بالـ JavaScript. تقدر تزود عليه آراء
+                أكتر أو تربطه بداتا حقيقية بعدين.
+              </p>
+              <div class="slider-controls">
+                <button class="slider-btn" id="prevSlide">→</button>
+                <button class="slider-btn" id="nextSlide">←</button>
+              </div>
+            </div>
+
+            <div class="testimonial-slider reveal">
+              <div class="slider-inner">
+                <div class="slide active">
+                  <div class="quote-mark">“</div>
+                  <p>
+                    الموقع مريح جدًا في التصفح، والرحلة كانت منظمة من أول الحجز
+                    لحد آخر يوم. أكتر حاجة عجبتني إن الشكل نفسه يحمسك تكمل
+                    وتستكشف.
+                  </p>
+                  <div class="author">
+                    <div>
+                      <strong>سارة أحمد</strong>
+                      <span>رحلة دهب</span>
+                    </div>
+                    <span>5.0 ★</span>
+                  </div>
+                </div>
+
+                <div class="slide">
+                  <div class="quote-mark">“</div>
+                  <p>
+                    حبيت تقسيمة الباقات والوضوح في كل التفاصيل. التصميم مختلف
+                    فعلًا ومش شبه مواقع السياحة التقليدية اللي كلها زحمة.
+                  </p>
+                  <div class="author">
+                    <div>
+                      <strong>كريم وائل</strong>
+                      <span>رحلة سيوة</span>
+                    </div>
+                    <span>4.9 ★</span>
+                  </div>
+                </div>
+
+                <div class="slide">
+                  <div class="quote-mark">“</div>
+                  <p>
+                    السلاسة في التنقل بين الوجهات خلت اختيار الرحلة أسهل بكتير،
+                    وكمان الألوان مريحة وتعطي إحساس بالسفر والمغامرة.
+                  </p>
+                  <div class="author">
+                    <div>
+                      <strong>محمد طارق</strong>
+                      <span>رحلة الأقصر وأسوان</span>
+                    </div>
+                    <span>5.0 ★</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="container">
+          <div class="contact-box">
+            <div class="contact-panel reveal">
+              <div class="title-box">
+                <span style="color: var(--primary); font-weight: 700"
+                  >تواصل سريع</span
+                >
+                <h2 style="margin: 10px 0 12px">
+                  خلّي رحلتك الجاية تبدأ من هنا
+                </h2>
+              </div>
+              <p>
+                ابعت تفاصيل الرحلة اللي في بالك، واحنا نرشح لك باقة مناسبة أو
+                نجهز لك برنامج مخصوص حسب عدد الأيام والميزانية.
+              </p>
+
+              <div class="contact-items">
+                <div class="contact-item">
+                  <div class="icon">✉</div>
+                  <div>
+                    <small>البريد الإلكتروني</small>
+                    <strong>hello@rehlatk.com</strong>
+                  </div>
+                </div>
+                <div class="contact-item">
+                  <div class="icon">☎</div>
+                  <div>
+                    <small>الهاتف</small>
+                    <strong>+20 100 000 0000</strong>
+                  </div>
+                </div>
+                <div class="contact-item">
+                  <div class="icon">⌂</div>
+                  <div>
+                    <small>المكتب</small>
+                    <strong>القاهرة، مصر</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-form reveal">
+              <form id="bookingForm">
+                <div class="input-wrap">
+                  <input type="text" placeholder="الاسم بالكامل" required />
+                </div>
+                <div class="input-wrap">
+                  <input
+                    type="email"
+                    placeholder="البريد الإلكتروني"
+                    required
+                  />
+                </div>
+                <div class="input-wrap">
+                  <input type="text" placeholder="الوجهة المطلوبة" required />
+                </div>
+                <div class="input-wrap">
+                  <textarea
+                    rows="6"
+                    placeholder="اكتب تفاصيل الرحلة أو عدد الأفراد أو الميزانية"
+                  ></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">
+                  إرسال الطلب
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-row">
+        <p>© 2026 Rehlatk</p>
+        <div style="display: flex; gap: 14px; flex-wrap: wrap">
+          <a href="#home">الرئيسية</a>
+          <a href="#packages">الباقات</a>
+          <a href="#contact">احجز الآن</a>
+        </div>
+      </div>
+    </footer>
+
+   <script src="js/main.js"></script>
+  </body>
+</html>
