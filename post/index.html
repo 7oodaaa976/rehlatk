@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tourism Social Post</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        background: #06111c;
+        font-family: "Cairo", sans-serif;
+        padding: 24px;
+      }
+
+      .post-frame {
+        width: 1080px;
+        height: 1350px;
+        position: relative;
+        overflow: hidden;
+        border-radius: 38px;
+        background:
+          radial-gradient(circle at top right, rgba(25, 194, 201, 0.18), transparent 24%),
+          radial-gradient(circle at bottom left, rgba(255, 209, 102, 0.1), transparent 28%),
+          linear-gradient(180deg, #04111d 0%, #061827 60%, #04111d 100%);
+        box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+        color: #fff;
+      }
+
+      .post-frame::before {
+        content: "";
+        position: absolute;
+        inset: 18px;
+        border-radius: 30px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        pointer-events: none;
+      }
+
+      .top-bar {
+        position: absolute;
+        top: 42px;
+        right: 46px;
+        left: 46px;
+        z-index: 3;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 18px;
+      }
+
+      .logo-chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        padding: 14px 18px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .logo-chip img {
+        width: 40px;
+        height: 40px;
+        object-fit: contain;
+        border-radius: 50%;
+      }
+
+      .logo-chip span {
+        font-size: 1rem;
+        font-weight: 700;
+        color: #eef6ff;
+      }
+
+      .top-copy {
+        max-width: 520px;
+        text-align: right;
+      }
+
+      .eyebrow {
+        display: inline-block;
+        padding: 8px 14px;
+        border-radius: 999px;
+        margin-bottom: 14px;
+        color: #7ff1f6;
+        background: rgba(25, 194, 201, 0.12);
+        border: 1px solid rgba(25, 194, 201, 0.18);
+        font-size: 0.95rem;
+        font-weight: 700;
+      }
+
+      .top-copy h1 {
+        margin: 0;
+        font-size: 3.3rem;
+        line-height: 1.14;
+        font-weight: 800;
+        letter-spacing: -1px;
+      }
+
+      .top-copy p {
+        margin: 14px 0 0;
+        color: #c7d2e2;
+        font-size: 1.12rem;
+        line-height: 1.9;
+      }
+
+      .gallery {
+        position: absolute;
+        inset: 230px 44px 44px;
+        display: grid;
+        grid-template-columns: 1.08fr 0.92fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 20px;
+      }
+
+      .card {
+        position: relative;
+        overflow: hidden;
+        border-radius: 34px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: rgba(255, 255, 255, 0.04);
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.28);
+      }
+
+      .card.large {
+        grid-row: span 2;
+      }
+
+      .card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      .card::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, rgba(3, 10, 18, 0.08), rgba(3, 10, 18, 0.45) 60%, rgba(3, 10, 18, 0.82));
+      }
+
+      .card-info {
+        position: absolute;
+        right: 20px;
+        left: 20px;
+        bottom: 20px;
+        z-index: 2;
+      }
+
+      .mini-tag {
+        display: inline-flex;
+        padding: 8px 12px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.14);
+        color: #f4f8ff;
+        font-size: 0.82rem;
+        font-weight: 700;
+        margin-bottom: 12px;
+      }
+
+      .card-info h3 {
+        margin: 0 0 6px;
+        font-size: 2rem;
+        font-weight: 800;
+      }
+
+      .card.small .card-info h3 {
+        font-size: 1.5rem;
+      }
+
+      .card-info p {
+        margin: 0;
+        color: #dce7f5;
+        font-size: 0.98rem;
+        line-height: 1.8;
+      }
+
+      .floating-note {
+        position: absolute;
+        top: 330px;
+        left: 70px;
+        z-index: 4;
+        width: 280px;
+        padding: 18px;
+        border-radius: 28px;
+        background: rgba(7, 20, 31, 0.72);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+      }
+
+      .floating-note small {
+        display: block;
+        color: #b9c6d8;
+        font-size: 0.9rem;
+        margin-bottom: 8px;
+      }
+
+      .floating-note strong {
+        display: block;
+        font-size: 1.55rem;
+        margin-bottom: 14px;
+      }
+
+      .floating-note .line {
+        height: 8px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.08);
+        overflow: hidden;
+      }
+
+      .floating-note .line span {
+        display: block;
+        width: 78%;
+        height: 100%;
+        border-radius: inherit;
+        background: linear-gradient(90deg, #ffd166, #ffe29a);
+      }
+
+      .footer-chip {
+        position: absolute;
+        right: 46px;
+        bottom: 34px;
+        z-index: 5;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 18px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        color: #dce7f5;
+        font-size: 0.92rem;
+      }
+
+      .footer-chip b {
+        color: #7ff1f6;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="post-frame">
+      <div class="top-bar">
+        <div class="top-copy">
+          <span class="eyebrow">UI Concept</span>
+          <h1>تصميم موقع سياحي<br />بشكل مختلف</h1>
+          <p>
+            تجربة بصرية حديثة تجمع بين قوة الصور، وضوح التنقل، وعرض الوجهات
+            بطريقة تخلي المستخدم يكمل استكشاف من أول لقطة.
+          </p>
+        </div>
+
+        <div class="logo-chip">
+          <img src="rlogo.png" alt="logo" />
+          <span>Voyago Travel</span>
+        </div>
+      </div>
+
+      <div class="floating-note">
+        <small>أفضل رحلة هذا الشهر</small>
+        <strong>سفاري + بحر + تصوير</strong>
+        <div class="line"><span></span></div>
+      </div>
+
+      <div class="gallery">
+        <article class="card large">
+          <img src="Screenshot 2026-04-11 143946.png" alt="tourism hero" />
+          <div class="card-info">
+            <span class="mini-tag">Hero Section</span>
+            <h3>واجهة تلفت النظر</h3>
+            <p>صورة قوية مع عناصر UI تخلي أول انطباع مميز وواضح.</p>
+          </div>
+        </article>
+
+        <article class="card small">
+          <img src="Screenshot 2026-04-11 143927.png" alt="journey flow" />
+          <div class="card-info">
+            <span class="mini-tag">User Flow</span>
+            <h3>رحلة أسهل</h3>
+            <p>عرض الخطوات بشكل مريح وواضح من أول الاختيار للحجز.</p>
+          </div>
+        </article>
+
+        <article class="card small">
+          <img src="Screenshot 2026-04-11 143958.png" alt="destinations" />
+          <div class="card-info">
+            <span class="mini-tag">Destinations</span>
+            <h3>وجهات متنوعة</h3>
+            <p>تقسيمة حديثة تساعد المستخدم يشوف الخيارات بسرعة.</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="footer-chip">
+        <span>Modern layout • Clean UI • <b>Tourism Design</b></span>
+      </div>
+    </div>
+  </body>
+</html>
